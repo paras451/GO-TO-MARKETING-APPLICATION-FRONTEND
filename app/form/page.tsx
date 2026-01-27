@@ -614,7 +614,7 @@ export default function MarketingPlan() {
               </motion.button>
             </form>
           </motion.div>
-        </AnimatePresence>
+        </AnimatePresence> 
 
         <AnimatePresence>
           {plan && (
