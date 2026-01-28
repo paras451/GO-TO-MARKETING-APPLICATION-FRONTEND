@@ -20,7 +20,7 @@ export default function Login() {
     setLoading(true);
 
     // Logic: Signup ke liye alag URL aur Login ke liye alag
-    const endpoint = isSignup ? "register/" : "login/";
+    const endpoint = isSignup ? "api/register/" : "api/login/";
     const url = `https://go-to-marketing-application-backend-1.onrender.com/${endpoint}`;
 
     try {
