@@ -152,9 +152,10 @@ export default function MarketingPlan() {
     setLoading(true);
     setError("");
     setPlan("");
+    
 
     try {
-      const res = await fetch("http://localhost:8000/api/generate-plan/", {
+      const res = await fetch("https://go-to-marketing-application-backend-1.onrender.com/api/generate-plan/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

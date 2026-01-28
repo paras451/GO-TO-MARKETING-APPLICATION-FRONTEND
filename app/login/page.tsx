@@ -21,7 +21,7 @@ export default function Login() {
 
     // Logic: Signup ke liye alag URL aur Login ke liye alag
     const endpoint = isSignup ? "register/" : "login/";
-    const url = `http://localhost:8000/api/${endpoint}`;
+    const url = `https://go-to-marketing-application-backend-1.onrender.com/${endpoint}`;
 
     try {
       const res = await fetch(url, {
