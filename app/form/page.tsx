@@ -632,7 +632,7 @@ export default function MarketingPlan() {
         </AnimatePresence> 
 
         <AnimatePresence>
-          {!plan && (
+          {plan && (
             <div className="fixed inset-0 z-50 flex items-center justify-center">
               {/* BACKDROP */}
               <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
