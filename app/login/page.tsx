@@ -147,7 +147,13 @@ export default function Login() {
               }`}
               disabled={loading}
             >
-              {loading ? "Processing..." : isSignup ? "Sign Up" : "Login"}
+              {loading
+                ? isSignup
+                  ? "Creating account… please wait"
+                  : "Logging in… please wait"
+                : isSignup
+                  ? "Sign Up"
+                  : "Login"}
             </button>
 
             {/* Switch Link */}
@@ -166,4 +172,3 @@ export default function Login() {
     </div>
   );
 }
-
