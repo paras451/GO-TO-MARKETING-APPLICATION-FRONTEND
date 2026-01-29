@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -7,6 +8,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Rocket, TrendingUp } from "lucide-react";
 
 export default function MarketingPlan() {
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const token = localStorage.getItem("access_token");
+
+    if (!token) {
+      toast.error("Please login first 🔐");
+      router.replace("/login");
+    }
+  }, [router]);
+
   const [formData, setFormData] = useState({
     targetAudience: "",
     location: "",
@@ -286,6 +299,7 @@ export default function MarketingPlan() {
     setIsLoggedIn(false);
     window.location.href = "/";
   };
+
 
   return (
     <div className="min-h-screen relative flex items-center justify-center">
@@ -618,7 +632,7 @@ export default function MarketingPlan() {
         </AnimatePresence> 
 
         <AnimatePresence>
-          {plan && (
+          {!plan && (
             <div className="fixed inset-0 z-50 flex items-center justify-center">
               {/* BACKDROP */}
               <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
