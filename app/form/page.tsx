@@ -204,31 +204,60 @@ export default function MarketingPlan() {
 
     printWindow.document.write(`
     <html>
-      <head>
-        <title>Go-To-Market Plan</title>
-        <style>
-          body {
-            font-family: Arial, sans-serif;
-            padding: 15px;
-          }
-          table {
-            width: 100%;
-            border-collapse: collapse;
-          }
-          th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-          }
-          h1, h2, h3 {
-            margin-top: 20px;
-          }
-        </style>
-      </head>
-      <body>
-        ${printContents}
-      </body>
-    </html>
+  <head>
+    <title>Go-To-Market Plan</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 30mm 20mm; 
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.7;            
+        padding: 0;
+        margin: 0;
+      }
+
+      .page {
+        max-width: 800px;          
+        margin: auto;
+      }
+
+      h1, h2, h3 {
+        margin-top: 24px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+
+      p, li {
+        margin-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th, td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      ${printContents}
+    </div>
+  </body>
+</html>
   `);
 
     printWindow.document.close();
