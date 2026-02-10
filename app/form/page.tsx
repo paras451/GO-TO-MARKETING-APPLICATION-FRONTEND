@@ -669,7 +669,7 @@ export default function MarketingPlan() {
               {/* MODAL CONTAINER */}
               <div className="relative z-10 w-full max-w-5xl mx-4">
                 {/* 🔘 ACTION BAR */}
-                <div className="flex justify-end items-center gap-3 mb-4 print-hide">
+                <div className="flex justify-end items-center gap-3 mb-4 print-hide mt-10">
                   <button
                     onClick={copyText}
                     className="px-4 py-2 rounded-lg text-sm font-medium
