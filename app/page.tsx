@@ -14,6 +14,9 @@ export default function Home() {
           loop
           muted
           playsInline
+          controlsList="nodownload noplaybackrate"
+          disablePictureInPicture
+          onContextMenu={(e) => e.preventDefault()}
         >
           <source src="/videos/gtm.mp4" type="video/mp4" />
         </video>
