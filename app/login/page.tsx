@@ -71,6 +71,9 @@ export default function Login() {
           loop
           muted
           playsInline
+          controlsList="nodownload noplaybackrate"
+          disablePictureInPicture
+          onContextMenu={(e) => e.preventDefault()}
         >
           <source src="/videos/login.mp4" type="video/mp4" />
         </video>
