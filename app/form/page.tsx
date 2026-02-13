@@ -348,6 +348,9 @@ export default function MarketingPlan() {
           loop
           muted
           playsInline
+          controlsList="nodownload noplaybackrate"
+          disablePictureInPicture
+          onContextMenu={(e) => e.preventDefault()}
         >
           <source src="/videos/market.mp4" type="video/mp4" />
           Your browser does not support the video tag.
