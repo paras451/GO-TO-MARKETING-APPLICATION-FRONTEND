@@ -436,7 +436,7 @@ export default function MarketingPlan() {
               {formData.category === "E-commerce" && (
                 <input
                   name="subCategory"
-                  placeholder="E-commerce Field (Electronics, Clothes, Grocery)"
+                  placeholder="Enter E-commerce Field (Electronics, Clothes, Grocery)"
                   onChange={handleChange}
                   required
                   className="input-modern"
@@ -472,9 +472,23 @@ export default function MarketingPlan() {
                   className="input-modern"
                 />
               )}
-
+              <motion.input
+                initial={{ opacity: 0, y: -60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 2,
+                  ease: "easeOut",
+                }}
+                type="text"
+                name="targetAudience"
+                placeholder="Enter Target Audience (e.g. Students, Professionals)"
+                onChange={handleChange}
+                required
+                className="input-modern"
+              />
+              
               {/* TARGET AUDIENCE */}
-              <motion.select
+              {/* <motion.select
                 initial={{ opacity: 0, y: -60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -490,7 +504,7 @@ export default function MarketingPlan() {
                 <option value="students">Students</option>
                 <option value="professionals">Professionals</option>
                 <option value="influencers">Influencers</option>
-              </motion.select>
+              </motion.select> */}
 
               {/* LOCATION */}
               <motion.select
@@ -523,7 +537,7 @@ export default function MarketingPlan() {
                 onChange={handleChange}
                 className="input-modern"
               >
-                <option value="no">Do you have a website? (No)</option>
+                <option value="no">Do you have a Website? (No)</option>
                 <option value="yes">Yes</option>
               </motion.select>
 
@@ -555,7 +569,7 @@ export default function MarketingPlan() {
                 onChange={handleChange}
                 className="input-modern"
               >
-                <option value="no">Do you have a mobile app? (No)</option>
+                <option value="no">Do you have a Mobile app? (No)</option>
                 <option value="yes">Yes</option>
               </motion.select>
 
