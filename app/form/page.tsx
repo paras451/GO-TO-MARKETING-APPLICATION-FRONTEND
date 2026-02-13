@@ -550,7 +550,7 @@ export default function MarketingPlan() {
                   //   ease: "easeOut",
                   // }}
                   name="websiteUrl"
-                  placeholder="Website URL / Name"
+                  placeholder="Enter Your Website URL / Name"
                   onChange={handleChange}
                   required
                   className="input-modern"
@@ -582,7 +582,7 @@ export default function MarketingPlan() {
                   //   ease: "easeOut",
                   // }}
                   name="appName"
-                  placeholder="Mobile App Name"
+                  placeholder="Enter Your Mobile App Name"
                   onChange={handleChange}
                   required
                   className="input-modern"
