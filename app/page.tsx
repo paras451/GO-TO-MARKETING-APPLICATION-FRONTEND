@@ -2,8 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+  fetch("https://go-to-marketing-application-backend-1.onrender.com");
+}, []);
+  
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* 🎥 Background Video */}
