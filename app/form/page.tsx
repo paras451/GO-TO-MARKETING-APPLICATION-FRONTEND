@@ -409,7 +409,7 @@ export default function MarketingPlan() {
               }}
               className="text-center text-gray-300 mt-2 mb-8"
             >
-              Generate a professional launch & marketing strategy
+              Generate a Professional Launch & Marketing Strategy
             </motion.p>
 
             {/* FORM (NOTHING REMOVED) */}
