@@ -6,11 +6,13 @@ import { Toaster } from "react-hot-toast";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ['400', '600', '700', '800']
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ['400', '600', '700', '800']
 });
 
 export const metadata: Metadata = {
