@@ -162,32 +162,34 @@ export default function MarketingPlan() {
 
   const generatePlan = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    setError("");
-    setPlan("");
-    
+    // setLoading(true);
+    // setError("");
+    // setPlan("");
+     localStorage.setItem("marketing_form", JSON.stringify(formData));
+ sessionStorage.setItem("generate_now", "true");
+  router.push("/result");
 
-    try {
-      const res = await fetch("https://go-to-marketing-application-backend-1.onrender.com/api/generate-plan/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    // try {
+    //   const res = await fetch("https://go-to-marketing-application-backend-1.onrender.com/api/generate-plan/", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(formData),
+    //   });
 
-      if (!res.ok) {
-        throw new Error("Failed to generate plan");
-      }
+    //   if (!res.ok) {
+    //     throw new Error("Failed to generate plan");
+    //   }
 
-      const data = await res.json();
-      setPlan(data.plan);
-      toast.success("Marketing plan generated successfully 🚀");
-    } catch (err) {
-      toast.error("Failed to generate plan. Please try again 😵‍💫");
-    } finally {
-      setLoading(false);
-    }
+    //   const data = await res.json();
+    //   setPlan(data.plan);
+    //   toast.success("Marketing plan generated successfully 🚀");
+    // } catch (err) {
+    //   toast.error("Failed to generate plan. Please try again 😵‍💫");
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   //adding print function
