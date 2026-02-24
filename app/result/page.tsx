@@ -52,7 +52,7 @@ export default function PlanPage() {
         return;
       }
 
-      const res = await fetch("http://127.0.0.1:8000/api/generate-plan/", {
+      const res = await fetch("https://go-to-marketing-application-backend-1.onrender.com/api/generate-plan/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
