@@ -333,11 +333,11 @@ export default function MarketingPlan() {
 
 
   return (
-    <div className="min-h-screen relative flex items-center justify-center">
+     <div className="min-h-screen relative flex items-center justify-center">
       {/* {isLoggedIn && ( */}
       <button
         onClick={handleLogout}
-        className="fixed top-4 right-4 z-50 bg-none text-white px-4 py-2 rounded-md hover:bg-red-600/80 border-white/30 hover: transition"
+        className="fixed top-4 right-4 z-50 bg-none text-white px-2 py-1 sm:py-0 rounded-md hover:bg-red-600/80 border-white/30 hover: transition"
       >
         LogOut
       </button>
@@ -477,6 +477,7 @@ export default function MarketingPlan() {
                   className="input-modern"
                 />
               )}
+
               <motion.input
                 initial={{ opacity: 0, y: -60 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -491,7 +492,6 @@ export default function MarketingPlan() {
                 required
                 className="input-modern"
               />
-              
               {/* TARGET AUDIENCE */}
               {/* <motion.select
                 initial={{ opacity: 0, y: -60 }}
@@ -555,7 +555,7 @@ export default function MarketingPlan() {
                   //   ease: "easeOut",
                   // }}
                   name="websiteUrl"
-                  placeholder="Enter Your Website URL / Name"
+                  placeholder="Website URL / Name"
                   onChange={handleChange}
                   required
                   className="input-modern"
@@ -587,7 +587,7 @@ export default function MarketingPlan() {
                   //   ease: "easeOut",
                   // }}
                   name="appName"
-                  placeholder="Enter Your Mobile App Name"
+                  placeholder="Mobile App Name"
                   onChange={handleChange}
                   required
                   className="input-modern"
@@ -677,7 +677,7 @@ export default function MarketingPlan() {
               </motion.button>
             </form>
           </motion.div>
-        </AnimatePresence> 
+        </AnimatePresence>
 
         <AnimatePresence>
           {plan && (
@@ -686,7 +686,7 @@ export default function MarketingPlan() {
               <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
 
               {/* MODAL CONTAINER */}
-              <div className="relative z-10 w-full max-w-5xl mx-4">
+              <div className="relative z-10 w-full max-w-5xl mx-4 ">
                 {/* 🔘 ACTION BAR */}
                 <div className="flex justify-end items-center gap-3 mb-4 print-hide mt-10">
                   <button
@@ -695,7 +695,7 @@ export default function MarketingPlan() {
                   bg-gradient-to-r from-purple-600 to-indigo-600
                      text-white hover:opacity-90 transition"
                   >
-                    📋 Copy
+                    📋 Copy Plan
                   </button>
 
                   <button
@@ -707,13 +707,13 @@ export default function MarketingPlan() {
                     🖨️ Print
                   </button>
 
-                  <button
+                  {/* <button
                     onClick={() => setPlan("")}
                     className="px-3 py-2 rounded-lg text-xl
                      text-white bg-red-500/80 hover:bg-red-600 transition"
                   >
                     ✕
-                  </button>
+                  </button> */}
                 </div>
 
                 {/* 📄 RESULT CARD */}
